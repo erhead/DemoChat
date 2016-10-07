@@ -88,6 +88,7 @@ namespace DemoChat.WinForms
                     newMessageTextBox.Enabled = false;
                     loadHistoryButton.Enabled = false;
                     sendButton.Enabled = false;
+                    statusLabel.Text = "Не активен";
                     break;
 
                 case ChatState.ConnectedToAnotherServer:
@@ -102,6 +103,7 @@ namespace DemoChat.WinForms
                     newMessageTextBox.Enabled = true;
                     loadHistoryButton.Enabled = true;
                     sendButton.Enabled = true;
+                    statusLabel.Text = "Подключен к серверу";
                     break;
 
                 case ChatState.OwnServerIsCreated:
@@ -116,6 +118,7 @@ namespace DemoChat.WinForms
                     newMessageTextBox.Enabled = true;
                     loadHistoryButton.Enabled = true;
                     sendButton.Enabled = true;
+                    statusLabel.Text = "Запущен сервер";
                     break;
             }
         }

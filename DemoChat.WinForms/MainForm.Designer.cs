@@ -33,6 +33,8 @@
             this.sendButton = new System.Windows.Forms.Button();
             this.loadHistoryButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.logFilePathTextBox = new System.Windows.Forms.TextBox();
             this.createOwnServerButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,9 +47,8 @@
             this.outServerPortTextBox = new System.Windows.Forms.TextBox();
             this.outServerIpTextBox = new System.Windows.Forms.TextBox();
             this.resetConnectionButton = new System.Windows.Forms.Button();
-            this.logFilePathTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.clearChatButton = new System.Windows.Forms.Button();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -110,6 +111,23 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Создать сервер";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Файл лога";
+            // 
+            // logFilePathTextBox
+            // 
+            this.logFilePathTextBox.Location = new System.Drawing.Point(76, 71);
+            this.logFilePathTextBox.Name = "logFilePathTextBox";
+            this.logFilePathTextBox.Size = new System.Drawing.Size(218, 20);
+            this.logFilePathTextBox.TabIndex = 9;
+            this.logFilePathTextBox.Text = "chat.log";
             // 
             // createOwnServerButton
             // 
@@ -223,23 +241,6 @@
             this.resetConnectionButton.UseVisualStyleBackColor = true;
             this.resetConnectionButton.Click += new System.EventHandler(this.resetConnectionButton_Click);
             // 
-            // logFilePathTextBox
-            // 
-            this.logFilePathTextBox.Location = new System.Drawing.Point(76, 71);
-            this.logFilePathTextBox.Name = "logFilePathTextBox";
-            this.logFilePathTextBox.Size = new System.Drawing.Size(218, 20);
-            this.logFilePathTextBox.TabIndex = 9;
-            this.logFilePathTextBox.Text = "chat.log";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Файл лога";
-            // 
             // clearChatButton
             // 
             this.clearChatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -251,11 +252,21 @@
             this.clearChatButton.UseVisualStyleBackColor = true;
             this.clearChatButton.Click += new System.EventHandler(this.clearChatButton_Click);
             // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(479, 38);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(65, 13);
+            this.statusLabel.TabIndex = 8;
+            this.statusLabel.Text = "Не активен";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 573);
+            this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.clearChatButton);
             this.Controls.Add(this.resetConnectionButton);
             this.Controls.Add(this.groupBox2);
@@ -297,6 +308,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox logFilePathTextBox;
         private System.Windows.Forms.Button clearChatButton;
+        private System.Windows.Forms.Label statusLabel;
     }
 }
 
